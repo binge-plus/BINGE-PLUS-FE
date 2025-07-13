@@ -44,8 +44,8 @@ const Movie = [
       }
     ],
     "rating": "8.0",
-    "vPoster": "/dune-v.jpg",
-    "hPoster": "/dune-h.jpg",
+    //"vPoster": "https://www.google.com/imgres?q=Dune%20verticle%20poster&imgurl=https%3A%2F%2Fcdn.printerval.com%2Funsafe%2F960x960%2Fassets.printerval.com%2F2023%2F08%2F30%2F18-6e2288e910471659e21fc867b2cdaa1b.jpg&imgrefurl=https%3A%2F%2Fprinterval.com%2Fuk%2Fdune-2021-poster-p4489163&docid=xB6mwuZ1Mz-2lM&tbnid=rX9jxzLelU9oKM&vet=12ahUKEwicj-zku4mOAxWEia8BHVSmBPcQM3oFCIUBEAA..i&w=640&h=960&hcb=2&ved=2ahUKEwicj-zku4mOAxWEia8BHVSmBPcQM3oFCIUBEAA",
+    "hPoster": "https://www.google.com/imgres?q=Dune%20horizontal%20poster&imgurl=https%3A%2F%2Ftheredledger.net%2Fwp-content%2Fuploads%2F2021%2F11%2FDune-Poster.jpg&imgrefurl=https%3A%2F%2Ftheredledger.net%2F2021%2F11%2F03%2Freview-dune-relies-on-the-cast-instead-of-story%2Fdune-poster%2F&docid=-l1saR8_8rx6tM&tbnid=d3jTtKPUrASqHM&vet=12ahUKEwjT2oDQu4mOAxUebfUHHX9SCB0QM3oECBgQAA..i&w=1200&h=747&hcb=2&ved=2ahUKEwjT2oDQu4mOAxUebfUHHX9SCB0QM3oECBgQAA",
     "trailerLink": "https://youtu.be/n9xhJrPXop4",
     "movieLink": "",
     "tags": [
@@ -100,7 +100,7 @@ const Movie = [
       }
     ],
     "rating": "8.0",
-    "vPoster": "/blade-runner-v.jpg",
+    //"vPoster": "/blade-runner-v.jpg",
     "hPoster": "/blade-runner-h.jpg",
     "trailerLink": "https://youtu.be/gCcx85zbxz4",
     "movieLink": "",
@@ -155,7 +155,7 @@ const Movie = [
       }
     ],
     "rating": "8.3",
-    "vPoster": "/top-gun-v.jpg",
+    //"vPoster": "/top-gun-v.jpg",
     "hPoster": "/top-gun-h.jpg",
     "trailerLink": "https://youtu.be/giXco2jaZ_4",
     "movieLink": "",
@@ -184,7 +184,7 @@ const Movie = [
       },
       {
         "id": "459f3739-0067-4789-8110-de6b19372726",
-        "name": "Zo\u00eb Kravitz",
+        "name": "Zo Kravitz",
         "character": "Unknown"
       },
       {
@@ -211,7 +211,7 @@ const Movie = [
       }
     ],
     "rating": "7.8",
-    "vPoster": "/batman-v.jpg",
+    //"vPoster": "/batman-v.jpg",
     "hPoster": "/batman-h.jpg",
     "trailerLink": "https://youtu.be/mqqft2x_Aa4",
     "movieLink": "",
@@ -267,7 +267,7 @@ const Movie = [
       }
     ],
     "rating": "8.2",
-    "vPoster": "/spiderman-v.jpg",
+    //"vPoster": "/spiderman-v.jpg",
     "hPoster": "/spiderman-h.jpg",
     "trailerLink": "https://youtu.be/JfVOs4VSpmA",
     "movieLink": "",
@@ -323,7 +323,7 @@ const Movie = [
       }
     ],
     "rating": "7.4",
-    "vPoster": "/john-wick-v.jpg",
+    //"vPoster": "/john-wick-v.jpg",
     "hPoster": "/john-wick-h.jpg",
     "trailerLink": "https://youtu.be/2AUmvWm5ZDQ",
     "movieLink": "",
@@ -379,7 +379,7 @@ const Movie = [
       }
     ],
     "rating": "8.1",
-    "vPoster": "/mad-max-v.jpg",
+    //"vPoster": "/mad-max-v.jpg",
     "hPoster": "/mad-max-h.jpg",
     "trailerLink": "https://youtu.be/hEJnMQG9ev8",
     "movieLink": "",
@@ -434,7 +434,7 @@ const Movie = [
       }
     ],
     "rating": "8.7",
-    "vPoster": "/matrix-v.jpg",
+    //"vPoster": "/matrix-v.jpg",
     "hPoster": "/matrix-h.jpg",
     "trailerLink": "https://youtu.be/vKQi3bBA1y8",
     "movieLink": "",
@@ -490,7 +490,7 @@ const Movie = [
       }
     ],
     "rating": "8.4",
-    "vPoster": "/endgame-v.jpg",
+    //"vPoster": "/endgame-v.jpg",
     "hPoster": "/endgame-h.jpg",
     "trailerLink": "https://youtu.be/TcMBFSGVi1c",
     "movieLink": "",
@@ -545,7 +545,7 @@ const Movie = [
       }
     ],
     "rating": "8.2",
-    "vPoster": "/die-hard-v.jpg",
+    //"vPoster": "/die-hard-v.jpg",
     "hPoster": "/die-hard-h.jpg",
     "trailerLink": "https://youtu.be/2TQ-pOvI6Xo",
     "movieLink": "",
@@ -600,7 +600,7 @@ const Movie = [
       }
     ],
     "rating": "8.4",
-    "vPoster": "/3idiots-v.jpg",
+    //"vPoster": "/3idiots-v.jpg",
     "hPoster": "/3idiots-h.jpg",
     "trailerLink": "https://youtu.be/xvszmNXdM4w",
     "movieLink": "",
@@ -655,7 +655,7 @@ const Movie = [
       }
     ],
     "rating": "8.0",
-    "vPoster": "/rrr-v.jpg",
+    //"vPoster": "/rrr-v.jpg",
     "hPoster": "/rrr-h.jpg",
     "trailerLink": "https://youtu.be/f_vbAtFSEc0",
     "movieLink": "",
@@ -710,7 +710,7 @@ const Movie = [
       }
     ],
     "rating": "8.0",
-    "vPoster": "/gullyboy-v.jpg",
+    //"vPoster": "/gullyboy-v.jpg",
     "hPoster": "/gullyboy-h.jpg",
     "trailerLink": "https://youtu.be/JfbxcD6biOk",
     "movieLink": "",
@@ -766,7 +766,7 @@ const Movie = [
       }
     ],
     "rating": "8.2",
-    "vPoster": "/baahubali2-v.jpg",
+    //"vPoster": "/baahubali2-v.jpg",
     "hPoster": "/baahubali2-h.jpg",
     "trailerLink": "https://youtu.be/G62HrubdD6o",
     "movieLink": "",
@@ -816,7 +816,7 @@ const Movie = [
       }
     ],
     "rating": "8.4",
-    "vPoster": "/kantara-v.jpg",
+    //"vPoster": "/kantara-v.jpg",
     "hPoster": "/kantara-h.jpg",
     "trailerLink": "https://youtu.be/g7dpm9LgxtQ",
     "movieLink": "",

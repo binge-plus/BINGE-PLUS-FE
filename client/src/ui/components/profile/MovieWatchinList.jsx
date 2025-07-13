@@ -2,6 +2,7 @@ import { Star, Clock } from 'lucide-react';
 import Image from '/download.jpeg';
 
 
+
 const MovieWatchingList = () => {
   const watchingMovies = [
     {

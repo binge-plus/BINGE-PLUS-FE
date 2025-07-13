@@ -1,42 +1,31 @@
 import {Star,Check } from 'lucide-react';
 import Image from '/download.jpeg'
+import Movie from '../../Data/moviesData';
+
+const WatchedID = [3,5,8,10]
+
+const transformMovieData = (movie) => ({
+    id: parseInt(movie.id),
+    title: movie.title,
+    poster: movie.vPoster, // Using vertical poster
+    genre: movie.genre,
+    rating: movie.rating,
+    description: movie.description,
+    year: movie.releaseDate,
+    // Additional fields from the new data structure
+    cast: movie.cast,
+    crew: movie.crew,
+    trailerLink: movie.trailerLink,
+    movieLink: movie.movieLink,
+    tags: movie.tags,
+    duration: movie.duration,
+});
+
+const watchedMovies = Movie
+    .filter((movie) => WatchedID.includes(parseInt(movie.id)))
+    .map(transformMovieData);
 
 const MovieWatchedList = () => {
-  const watchedMovies = [
-    {
-      id: "6",
-      title: "John Wick",
-      description: "An ex-hit-man comes out of retirement to track down the gangsters that took everything from him.",
-      releaseDate: "2014",
-      genre: ["Action", "Crime", "Thriller"],
-      rating: "7.4",
-      vPoster: Image,
-      duration: "1h 41m",
-      tags: ["assassin", "revenge", "neo-noir"]
-    },
-    {
-      id: "7",
-      title: "Mad Max: Fury Road",
-      description: "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland.",
-      releaseDate: "2015",
-      genre: ["Action", "Adventure", "Sci-Fi"],
-      rating: "8.1",
-      vPoster: Image,
-      duration: "2h",
-      tags: ["post-apocalypse", "car chase", "feminism"]
-    },
-    {
-      id: "8",
-      title: "The Matrix",
-      description: "When a beautiful stranger leads Neo to a forbidding underworld, he discovers the shocking truth about reality.",
-      releaseDate: "1999",
-      genre: ["Action", "Sci-Fi"],
-      rating: "8.7",
-      vPoster: Image,
-      duration: "2h 16m",
-      tags: ["simulation", "AI", "reality"]
-    }
-  ];
 
   return (
     <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
@@ -50,7 +39,7 @@ const MovieWatchedList = () => {
           <div key={movie.id} className="bg-gray-700/50 rounded-xl p-4 hover:bg-gray-700/70 transition-all duration-300 group">
             <div className="flex space-x-3">
               <img
-                src={movie.vPoster}
+                src={Image}
                 alt={movie.title}
                 className="w-16 h-20 rounded-lg object-cover"
               />

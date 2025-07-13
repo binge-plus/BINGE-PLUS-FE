@@ -2,16 +2,12 @@ import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import MovieCard from "./movie-card"
 
-
-
-
-
 export default function MovieCarousel({ title, movies }) {
   const [scrollPosition, setScrollPosition] = useState(0)
   const cardWidth = 200
   const gap = 16
   const visibleCards = 6
-  const maxScroll = Math.max(0, (movies.length - visibleCards) * (cardWidth + gap))
+  const maxScroll = Math.max(0, (movies.length - visibleCards+1) * (cardWidth + gap))
 
   const scrollLeft = () => {
     setScrollPosition((prev) => Math.max(0, prev - (cardWidth + gap) * 3))

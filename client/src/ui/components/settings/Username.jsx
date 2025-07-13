@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Save} from 'lucide-react';
+import Profile from '../../Data/profileData';
+
+const name = Profile.username;
+
+
 
 const UsernameBlock = () => {
-  const [username, setUsername] = useState('john_doe');
+  const [username, setUsername] = useState(name);
 
   const handleSaveUsername = () => {
+    Profile.username = username; // Update the global name variable
     console.log('Username updated:', username);
     // Add your save logic here
+    
   };
 
   return (

@@ -1,12 +1,9 @@
 import { Star, Film, Music, Award, Users } from 'lucide-react';
+import Profile from '../../Data/profileData';
+
+const {preferences} = Profile;
 
 const Preferences = () => {
-  const preferences = {
-    genre: ["Action", "Comedy", "Drama"],
-    actors: ["Timothée Chalamet", "Emma Stone", "Robert Downey Jr.", "Scarlett Johansson"],
-    directors: ["Christopher Nolan", "Quentin Tarantino", "Martin Scorsese"],
-    Misc: ["Hans Zimmer", "John Williams", "Marvel Cinematic Universe", "DC Extended Universe"]
-  };
 
   const getIcon = (category) => {
     switch(category) {

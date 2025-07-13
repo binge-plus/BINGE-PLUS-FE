@@ -5,9 +5,6 @@ import Preferences from '../components/profile/Preference';
 import MovieWatchedList from '../components/profile/MovieWatchedList';
 import MovieWatchingList from '../components/profile/MovieWatchinList';
 
-
-
-
 const Profile = () => {
   const [isNavHovered, setIsNavHovered] = useState(false);
 
