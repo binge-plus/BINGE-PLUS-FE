@@ -97,11 +97,11 @@ export default function HeroCarousel() {
     )
   }
 
-  const currentMovie = heroMovies[currentIndex]
+  const currentMovie = heroMovies[currentIndex%5]
 
   return (
     <div
-      className="relative h-[70vh] w-full overflow-hidden bg-gray-900"
+      className="relative h-screen w-full overflow-hidden bg-gray-900"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

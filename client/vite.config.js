@@ -1,11 +1,14 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import dontenv from 'dotenv'
+dontenv.config()
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()], 
-  server:{
-    port: 4444,
+  plugins: [react(), tailwindcss()],
+  server: {
+    port: process.env.PORT, // Use PORT from .env or default to 4444
+    host: process.env.HOST,
   }
 })

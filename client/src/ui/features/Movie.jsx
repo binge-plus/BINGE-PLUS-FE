@@ -3,6 +3,7 @@ import MovieCarousel from "../components/base/movie-carousel";
 import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import api from '../lib/axios';
+import Modal from "../components/Modal";
 
 
 const transformMovieData = (movie) => ({
@@ -41,7 +42,7 @@ export default function Home() {
 
 
     // Filter and transform continue watching movies
-    const continueWatching = movies
+    const latestUploads = movies
         .map(transformMovieData);
 
     // // Filter and transform latest uploads movies
@@ -99,6 +100,11 @@ export default function Home() {
         .filter((movie) => movie.genres.includes("SCI_FI"))
         .map(transformMovieData);
 
+    // Filter romance movies based on genre
+    const romanceMovies = movies
+        .filter((movie) => movie.genres.includes("ROMANCE"))
+        .map(transformMovieData);
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex">
             {/* Navigation */}
@@ -112,6 +118,7 @@ export default function Home() {
                     isNavHovered ? "ml-64 blur-sm brightness-50" : "ml-20"
                 }`}
             >
+                <Modal />
                 {/* Overlay when nav is hovered */}
                 {isNavHovered && (
                     <div
@@ -121,14 +128,17 @@ export default function Home() {
                 )}
 
                 <main className="relative z-0">
-                    <HeroCarousel />
+                    
+                        {/* Hero Carousel */}
+                        <HeroCarousel />
+                    
 
                     <div className="container mx-auto px-6 py-8 space-y-8">
                         {/* {continueWatching.length > 0 && (
                             <MovieCarousel title="Continue Watching" movies={continueWatching} />
                         )} */}
-                        {continueWatching.length > 0 && (
-                            <MovieCarousel title="Latest Uploads" movies={continueWatching} />
+                        {latestUploads.length > 0 && (
+                            <MovieCarousel title="Latest Uploads" movies={latestUploads} />
                         )}
                         {actionMovies.length > 0 && (
                             <MovieCarousel title="Action Movies" movies={actionMovies} />
@@ -159,6 +169,9 @@ export default function Home() {
                         )}
                         {sciFiMovies.length > 0 && (
                             <MovieCarousel title="Sci-Fi Movies" movies={sciFiMovies} />
+                        )}
+                        {romanceMovies.length > 0 && (
+                            <MovieCarousel title="Romance Movies" movies={romanceMovies} />
                         )}
                     </div>
                 </main>

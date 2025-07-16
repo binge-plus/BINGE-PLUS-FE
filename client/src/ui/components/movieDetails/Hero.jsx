@@ -12,7 +12,7 @@ const Hero = ({ title, image, trailerUrl, movieUrl }) => {
     if (isHovered) {
       hoverTimerRef.current = setTimeout(() => {
         setShowTrailer(true);
-      }, 2000);
+      }, 1000);
     } else {
       clearTimeout(hoverTimerRef.current);
       setShowTrailer(false);
@@ -25,7 +25,7 @@ const Hero = ({ title, image, trailerUrl, movieUrl }) => {
 
   return (
     <div
-      className="relative h-[70vh] w-full overflow-hidden rounded-lg"
+      className="relative h-screen w-full overflow-hidden rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -59,13 +59,6 @@ const Hero = ({ title, image, trailerUrl, movieUrl }) => {
       {!showTrailer && (
         <div className="absolute bottom-8 left-16 items-center justify-center">
           <div className="flex flex-col gap-4">
-            <button
-              onClick={() => setShowTrailer(true)}
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-red-600 to-orange-500 px-8 py-3 font-semibold text-white transition-all hover:from-red-700 hover:to-orange-600 hover:scale-105"
-            >
-              <Play size={20} fill="white" />
-              Play Trailer
-            </button>
             <button
               onClick={() => window.open(movieUrl, "_blank")}
               className="flex items-center gap-2 rounded-lg bg-gray-800/50 backdrop-blur-md px-8 py-3 font-semibold text-white border border-gray-600 transition-all hover:bg-gray-700/50"

@@ -6,6 +6,7 @@ import Cast from '../components/movieDetails/Cast';
 import Clips from '../components/movieDetails/Clips';
 import Review from '../components/movieDetails/Review';
 import MovieCarousel from '../components/base/movie-carousel';
+import Modal from '../components/Modal';
 import api from '../lib/axios';
 
 const transformRecommendedMovie = (recmovie) => ({
@@ -155,6 +156,7 @@ const MovieDetail = () => {
           isNavHovered ? 'ml-64 blur-sm brightness-50' : 'ml-20'
         }`}
       >
+        <Modal />
         {/* Overlay when nav is hovered */}
         {isNavHovered && (
           <div
