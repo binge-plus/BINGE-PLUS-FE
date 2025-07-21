@@ -76,4 +76,4 @@ jobs:
           script: |
             cd /var/www/html/bingeplus-dev-fe/client
             npm install
-            npm run dev
+            npm run build
