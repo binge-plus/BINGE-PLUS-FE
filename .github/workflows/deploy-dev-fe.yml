@@ -66,7 +66,7 @@ jobs:
           script: |
             cd /var/www/html/bingeplus-dev-fe/client
             npm install
-            vite build
+            npm run build
 
       - name: Restart Apache2
         uses: appleboy/ssh-action@master
