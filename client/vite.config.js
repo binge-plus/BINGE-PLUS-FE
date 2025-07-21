@@ -9,6 +9,5 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: process.env.PORT, // Use PORT from .env or default to 4444
-    host: process.env.HOST,
   }
 })
