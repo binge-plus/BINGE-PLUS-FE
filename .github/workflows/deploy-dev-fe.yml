@@ -77,6 +77,6 @@ jobs:
             cd /var/www/html/bingeplus-dev-fe/client
             npm install
             npm run build
-            npm install -g serve
             sudo fuser -k 4444/tcp || true
-            nohup serve -s dist -l 4444 > out.log 2>&1 &
+            nohup npx serve -s dist -l 4444 > out.log 2>&1 &
+
