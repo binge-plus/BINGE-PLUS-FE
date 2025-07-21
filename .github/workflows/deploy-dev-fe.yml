@@ -77,4 +77,4 @@ jobs:
             cd /var/www/html/bingeplus-dev-fe/client
             npm install
             npm run build
-            sudo cp -r dist/* /var/www/html/bingeplus-dev-fe/
+            sudo cp -r /var/www/html/bingeplus-dev-fe/client/dist/*
