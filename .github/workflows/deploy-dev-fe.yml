@@ -57,6 +57,16 @@ jobs:
     needs: deploy
 
     steps:
+      - name: Restart Apache2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.GCP_VM_HOST }}
+          username: ${{ secrets.GCP_VM_USERNAME }}
+          key: ${{ secrets.GCP_VM_PRIVATE_KEY }}
+          script: |
+            sudo systemctl restart apache2
+
+            
       - name: Start Server
         uses: appleboy/ssh-action@master
         with:
@@ -67,12 +77,3 @@ jobs:
             cd /var/www/html/bingeplus-dev-fe/client
             npm install
             npm run build
-
-      - name: Restart Apache2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.GCP_VM_HOST }}
-          username: ${{ secrets.GCP_VM_USERNAME }}
-          key: ${{ secrets.GCP_VM_PRIVATE_KEY }}
-          script: |
-            sudo systemctl restart apache2
