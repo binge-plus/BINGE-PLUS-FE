@@ -25,7 +25,7 @@ const Hero = ({ title, image, trailerUrl, movieUrl }) => {
 
   return (
     <div
-      className="relative h-screen w-full overflow-hidden rounded-lg"
+      className="relative h-[75vh] w-full overflow-hidden rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

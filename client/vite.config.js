@@ -8,7 +8,7 @@ dontenv.config()
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    port: process.env.PORT, // Use PORT from .env or default to 4444
-    host: process.env.HOST,
+    port: process.env.PORT || 4444, // Use PORT from .env or default to 4444
+    host: process.env.HOST || 'localhost', // Use HOST from .env or default to 'localhost'
   }
 })
