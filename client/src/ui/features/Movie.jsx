@@ -129,8 +129,6 @@ export default function Home() {
 
                 <main className="relative z-0">
                     <div className="absolute inset-0 bg-gray-900 h-20" />
-                    {/* Hero Carousel */}
-                    <HeroCarousel />
 
                     <div className="container mx-auto px-6 py-8 space-y-8">
                         {/* {continueWatching.length > 0 && (
