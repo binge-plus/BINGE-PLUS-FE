@@ -64,8 +64,8 @@ jobs:
             cd /var/www/html/bingeplus-fe/client
             npm install
             npm run build
-            sudo fuser -k 3005/tcp || true
-            nohup npx serve -s dist -l 3005 > out.log 2>&1 &
+            sudo fuser -k 3000/tcp || true
+            nohup npx serve -s dist -l 3000 > out.log 2>&1 &
 
       - name: Restart Apache2
         uses: appleboy/ssh-action@master

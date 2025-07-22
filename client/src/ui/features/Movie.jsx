@@ -17,10 +17,10 @@ const transformMovieData = (movie) => ({
 });
 
 // IDs for continue watching (from your original data)
-const continueWatchingIds = [1, 2, 3, 4];
+// const continueWatchingIds = [1, 2, 3, 4];
 
 // IDs for latest uploads (from your original data)
-const latestUploadsIds = [7, 8, 9, 10, 11, 12, 15];
+// const latestUploadsIds = [7, 8, 9, 10, 11, 12, 15];
 
 export default function Home() {
     const [isNavHovered, setIsNavHovered] = useState(false);
@@ -128,10 +128,9 @@ export default function Home() {
                 )}
 
                 <main className="relative z-0">
-                    
-                        {/* Hero Carousel */}
-                        <HeroCarousel />
-                    
+                    <div className="absolute inset-0 bg-gray-900 h-20" />
+                    {/* Hero Carousel */}
+                    <HeroCarousel />
 
                     <div className="container mx-auto px-6 py-8 space-y-8">
                         {/* {continueWatching.length > 0 && (
