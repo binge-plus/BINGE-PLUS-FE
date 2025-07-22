@@ -1,6 +1,9 @@
 name: Deploy Prod-Frontend for BingePlus
 
 on:
+  pull_request:
+    branches:
+      - develop
   push:
     branches:
       - main
