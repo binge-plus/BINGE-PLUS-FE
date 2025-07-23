@@ -14,6 +14,7 @@ const transformMovieData = (movie) => ({
     rating: movie.rating,
     description: movie.description,
     year: movie.releaseDate ? movie.releaseDate.substring(0, 4) : null,
+    createdAt: movie.createdAt,
 });
 
 // IDs for continue watching (from your original data)
@@ -43,7 +44,8 @@ export default function Home() {
 
     // Filter and transform continue watching movies
     const latestUploads = movies
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // // Filter and transform latest uploads movies
     // const latestUploads = Movie
@@ -53,57 +55,68 @@ export default function Home() {
     // Filter action movies based on genre
     const actionMovies = movies
         .filter((movie) => movie.genres.includes("ACTION"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter adventure movies based on genre
     const adventureMovies = movies
         .filter((movie) => movie.genres.includes("ADVENTURE"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter drama movies based on genre
     const dramaMovies = movies
         .filter((movie) => movie.genres.includes("DRAMA"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter mystery movies based on genre
     const mysteryMovies = movies
         .filter((movie) => movie.genres.includes("MYSTERY"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter horror movies based on genre
     const horrorMovies = movies
         .filter((movie) => movie.genres.includes("HORROR"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter comedy movies based on genre
     const comedyMovies = movies
         .filter((movie) => movie.genres.includes("COMEDY"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter crime movies based on genre
     const crimeMovies = movies
         .filter((movie) => movie.genres.includes("CRIME"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter fantasy movies based on genre
     const fantasyMovies = movies
         .filter((movie) => movie.genres.includes("FANTASY"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter thriller movies based on genre
     const thrillerMovies = movies
         .filter((movie) => movie.genres.includes("THRILLER"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     
     // Filter sci-fi movies based on genre
     const sciFiMovies = movies
         .filter((movie) => movie.genres.includes("SCI_FI"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     // Filter romance movies based on genre
     const romanceMovies = movies
         .filter((movie) => movie.genres.includes("ROMANCE"))
-        .map(transformMovieData);
+        .map(transformMovieData)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex">
