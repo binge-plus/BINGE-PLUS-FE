@@ -54,10 +54,12 @@ const Navbar = ({ onHoverChange }) => {
       >
         <div className="flex flex-col h-full">
           {/* Logo Section */}
-          <div className="flex items-center p-2 mb-8">
+          <div className="flex items-center mb-8">
             <Link to="/" className="flex items-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95">
-                <span className="text-white font-bold text-xl">B+</span>
+              <div className="w-16 h-16  rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95">
+                <span className="flex items-center justify-center w-12 h-12">
+                  <img src="/logogif.gif" alt="B+" />
+                </span>
               </div>
               <span className="ml-4 text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                 Binge+
