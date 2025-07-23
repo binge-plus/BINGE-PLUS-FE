@@ -21,7 +21,7 @@ import ComingSoon from './ui/features/ComingSoon';
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<Movie />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<ComingSoon />} />
             <Route path="/profile" element={<ComingSoon />} />
             <Route path="/register" element={<ComingSoon />} />

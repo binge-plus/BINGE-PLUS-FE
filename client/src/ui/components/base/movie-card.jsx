@@ -61,12 +61,7 @@ export default function MovieCard({ id, title, poster, genre, rating, descriptio
           )}
         </div>
 
-        {/* Title below card (when not hovered) */}
-        {!isHovered && (
-          <div className="mt-2 px-1">
-            <h3 className="text-sm font-medium text-white truncate">{title}</h3>
-          </div>
-        )}
+        
       </div>
     </Link>
   )

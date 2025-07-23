@@ -55,20 +55,7 @@ const Hero = ({ title, image, trailerUrl, movieUrl }) => {
         </div>
       )}
 
-      {/* Overlay Controls */}
-      {!showTrailer && (
-        <div className="absolute bottom-8 left-16 items-center justify-center">
-          <div className="flex flex-col gap-4">
-            <button
-              onClick={() => window.open(movieUrl, "_blank")}
-              className="flex items-center gap-2 rounded-lg bg-gray-800/50 backdrop-blur-md px-8 py-3 font-semibold text-white border border-gray-600 transition-all hover:bg-gray-700/50"
-            >
-              <ExternalLink size={20} />
-              Watch Movie
-            </button>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 };
