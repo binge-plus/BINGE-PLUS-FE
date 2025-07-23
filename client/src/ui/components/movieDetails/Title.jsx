@@ -1,6 +1,6 @@
-import { Clock, Calendar, Star } from "lucide-react"
+import { Clock, Calendar, Star, Play, ExternalLink } from "lucide-react"
 
-const MovieDetails = ({ poster, title, releaseDate, duration, rating, description, genre }) => {
+const MovieDetails = ({ poster, title, releaseDate, duration, rating, description, genre, movieUrl }) => {
 
   // Helper function to format release date
   const formatDate = (dateString) => {
@@ -34,12 +34,37 @@ const MovieDetails = ({ poster, title, releaseDate, duration, rating, descriptio
         {/* Main Content */}
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Vertical Poster */}
-          <div className="flex-shrink-0">
-            <img
-              src={movieData.poster || "/placeholder.svg"}
-              alt={`${movieData.title} poster`}
-              className="w-64 h-96 object-cover rounded-lg shadow-2xl border border-gray-700 hover:scale-105 transition-transform duration-300"
-            />
+          <div className="flex-shrink-0 flex flex-col items-center gap-6">
+            <div className="relative group">
+              <img
+                src={movieData.poster || "/placeholder.svg"}
+                alt={`${movieData.title} poster`}
+                className="w-64 h-96 object-cover rounded-xl shadow-2xl border border-gray-700 group-hover:scale-105 transition-all duration-300"
+              />
+              
+            </div>
+
+            {movieUrl && (
+              <div className="w-full max-w-64">
+                <a
+                  href={movieUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-xl shadow-lg hover:from-red-700 hover:to-red-800 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <Play 
+                    size={20} 
+                    className="group-hover:scale-110 transition-transform duration-200" 
+                    fill="currentColor"
+                  />
+                  <span className="text-lg">Watch Now</span>
+                  <ExternalLink 
+                    size={16} 
+                    className="opacity-70 group-hover:opacity-100 transition-opacity duration-200"
+                  />
+                </a>
+              </div>
+            )}
           </div>
           
           {/* All Movie Info */}
