@@ -18,7 +18,7 @@ const Modal = () => {
 
   useEffect(() => {
     const currentTime = new Date().getTime();
-    const oneHour = 2 * 60 * 1000; // 1 hour in milliseconds
+    const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
     const lastShownTime = getLastShownTime();
 
     if (!lastShownTime) {
@@ -50,7 +50,7 @@ const Modal = () => {
     if (!isOpen) {
       const interval = setInterval(() => {
         const currentTime = new Date().getTime();
-        const oneHour = 2 * 60 * 1000;
+        const oneHour = 60 * 60 * 1000;
         const lastShownTime = getLastShownTime();
         
         if (lastShownTime) {
@@ -61,7 +61,7 @@ const Modal = () => {
             setTimeLeft(null);
             clearInterval(interval);
           } else {
-            setTimeLeft(Math.ceil(remaining / (60 * 60 * 1000))); // hours
+            setTimeLeft(Math.ceil(remaining / (60 * 1000))); // hours
           }
         }
       }, 1000);
